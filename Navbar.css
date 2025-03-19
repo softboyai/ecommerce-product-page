@@ -1,0 +1,123 @@
+/* Navbar styling */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.navbar-search {
+  flex-grow: 1;
+  margin: 0 20px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  transition: border-color 0.3s;
+}
+
+.navbar-search:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  position: relative; /* Add relative positioning to the link */
+  margin-left: 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.cart-icon {
+  width: 24px; /* Set the size of the cart icon */
+  height: 24px;
+}
+.cart-count {
+  position: absolute; 
+  /* Position the count absolutely within the link */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center the count */
+  background-color: #ff9900; /* Use a yellow-orange color similar to Amazon */
+  font-size: 0.7rem; /* Make the font size smaller */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 15px; /* Ensure a minimum size for the circle */
+  height: 15px; /* Ensure a consistent height */
+  z-index: 1; /* Ensure the count is above the icon */
+  color: #fff; /* Use white text color for contrast */
+}
+
+/* Remove duplicate cart-count styles */
+.navbar-link:hover {
+  color: #007bff;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-search {
+    display: none; /* Hide search bar on mobile */
+  }
+
+  .navbar-links {
+    display: none; /* Hide links initially on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on mobile */
+  }
+}
