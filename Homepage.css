@@ -1,0 +1,77 @@
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Gradient background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+.button-toggle-cart {
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-toggle-cart:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Product display styling */
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Review section styling */
+.review-section {
+  margin-top: 32px;
+  padding: 16px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.review-section:hover {
+  background-color: #f1f5f9;
+}
